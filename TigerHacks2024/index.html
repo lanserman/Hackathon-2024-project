@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./carrot.png" />
+    <title>Plant Emergence Calculator</title>
+  </head>
+  <body>
+    <h1>
+      <img src="./carrot.png" class="carrot" />
+      <img src="./TitleText.png" class="title-text" />
+      <img src="./carrot.png" class="carrot" />
+    </h1>
+    <div class="app">
+      <form method="POST">
+        <!-- Plant Selection -->
+        <div class="form-row">
+          <!-- State and City Selection -->
+          <label for="state">State:</label>
+          <select type="text" id="state">
+<<<<<<< HEAD
+            <option>KS</option>
+            <option>IA</option>
+            <option>MO</option>
+            <option>AK</option>
+=======
+            <option value="KS">KS</option>
+            <option value="IA">IA</option>
+            <option value="MO">MO</option>
+>>>>>>> parent of 6f861fd (Merge branch 'main' of https://github.com/dbehshhhej/TigerHacks2024)
+          </select>
+
+          <label for="city">City:</label>
+          <!-- <input
+            type="text"
+            id="city"
+            placeholder="Enter city"
+            value="Columbia"
+          /> -->
+          <select type="text" id="city" class="location-info">
+<<<<<<< HEAD
+            <option>Columbia</option>
+            <option>Manhattan</option>
+            <option>Des Moines</option>
+            <option>Juneau</option>
+=======
+            <option value="Columbia">Columbia</option>
+            <option value="Manhattan">Manhattan</option>
+            <option value="Wheat">Des Moines</option>
+>>>>>>> parent of 6f861fd (Merge branch 'main' of https://github.com/dbehshhhej/TigerHacks2024)
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="plant" class="crop-info hidden">Choose a plant:</label>
+          <select id="plant" class="crop-info hidden">
+            <option value="corn">Corn</option>
+            <option value="soybean">Soybean</option>
+            <option value="wheat">Wheat</option>
+            <option value="alfalfa">Alfalfa</option>
+            <option value="cotton">Cotton</option>
+            <option value="tomato">Tomato</option>
+            <option value="lettuce">Lettuce</option>
+            <option value="cucumber">Cucumber</option>
+            <option value="rice">Rice</option>
+            <option value="potato">Potato</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <!--Next button-->
+          <button
+            id="next-button"
+            class="button-row next-button-class"
+            type="button"
+          >
+            Next
+          </button>
+        </div>
+
+        <div class="form-row crop-info hidden">
+          <!-- Planting Date -->
+          <label for="plant-date">Planting Date:</label>
+          <input type="date" id="plant-date" />
+
+          <label for="current-date">Current Date:</label>
+          <input type="date" id="current-date" />
+        </div>
+
+        <div class="form-row crop-info hidden">
+          <!-- Calculate Button -->
+          <button id="calculate-button" class="button-row" type="button">
+            Calculate
+          </button>
+        </div>
+
+        <div class="form-row results crop-info hidden">
+          <div>
+            <label for="gdd-accum" class="hidden-label">Accumulated GDD:</label>
+            <p type="text" id="gdd-accum" readonly></p>
+          </div>
+          <div class="emergence-section">
+            <label for="emergence-date" class="hidden-label"
+              >Emergence Date:</label
+            >
+            <p type="text" id="emergence"></p>
+          </div>
+          <div class="pests-present-section">
+            <label for="pests-present" class="hidden-label"
+              >Pests Present:</label
+            >
+            <p type="text" id="pests-present" readonly></p>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="random-bug-section">
+      <div class="form-row results crop-info hidden">
+        <div class="bug-names">
+          <label for="random-bug-name">Cool Random Bug Name:</label>
+          <div>
+            <img src="./ant.png" class="ant" />
+          </div>
+          <p type="text" id="random-bug-name"></p>
+          <label for="random-bug-fact">Cool Random Bug Fact:</label>
+          <p type="text" id="random-bug-fact"></p>
+          <p type="text">Isn't this cool?!</p>
+        </div>
+      </div>
+    </div>
+    <div class="about-section">
+      <div class="form-row results">
+        <h4><strong>What is GDD?</strong></h4>
+      </div>
+      <div>
+        <p>
+          Growth Degree Days (GDD) is a centuries old method of tracking and
+          predicting farm growth. Originally invented by Rene de Reamur in 1735,
+          GDD acknowledges this truth: Crops, among all other plants, begin
+          their growth after a certain temperature, usually in the early spring
+          as temperatures rise. As the temperature rises above that base
+          temperature, so too does the rate of growth of the crop rise.
+          According to GDD, it is the accumulation of degrees above that base
+          temperature that can predict different landmarks in a crops
+          development, wether that be a lot of degrees above in a few days or a
+          few degrees above over many days.
+        </p>
+        <p>
+          Additionally, GDD can also be used to predict when certain pests would
+          become problems during the season, allowing farmers to time pesticide
+          applications, making their use more effective, both in cost and pest
+          resistance!
+        </p>
+      </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="script.js" type="module"></script>
+    <script src="app.js" type="module"></script>
+    <script src="constants.js" type="module"></script>
+    <script src="future_forecast_call.js" type="module"></script>
+    <script src="latlong_converter.js" type="module"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="historicCalls.js" type="module"></script>
+    <script src="historical_data_call.js" type="module"></script>
+  </body>
+</html>
